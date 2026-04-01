@@ -1,0 +1,196 @@
+body {
+    background-color: #141414;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Geist', sans-serif;
+}
+
+.conteudo-principal {
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3.5vw;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.lista-perfis {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-bottom: 50px;
+    list-style: none;
+    padding: 0;
+}
+
+.item-perfil {
+    /* Tamanho quadrado padronizado */
+    width: 160px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------- AVATAR ---------- */
+
+.avatar-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagem-perfil {
+    /* Container quadrado de 160px */
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.icone-avatar {
+    /* Ocupa toda área do container */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icone-avatar img {
+    /* Imagem quadrada de 160x160 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* ---------- NOME ---------- */
+
+.nome-perfil {
+    font-size: 1.2vw;
+    margin-top: 8px;
+    color: #808080;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+/* ---------- HOVER UNIFICADO ---------- */
+
+.perfil:hover .imagem-perfil {
+    /* Efeito de destaque */
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.perfil:hover .icone-avatar img {
+    /* Borda branca no hover */
+    border-color: #fff;
+}
+
+.perfil:hover .nome-perfil {
+    color: #fff;
+}
+
+/* ---------- GERENCIAR ---------- */
+
+.gerenciar {
+    margin-top: 20px;
+}
+
+.botao-gerenciar {
+    background: transparent;
+    border: 1px solid grey;
+    color: grey;
+    padding: 10px 30px;
+    font-size: 1vw;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 200;
+    transition: all 0.3s;
+}
+
+.botao-gerenciar:hover {
+    border-color: #e5e5e5;
+    color: #e5e5e5;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media (max-width: 768px) {
+    .item-perfil {
+        /* Reduz para 120px em telas pequenas */
+        width: 120px;
+    }
+
+    .imagem-perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .icone-avatar img {
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .nome-perfil {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-perfil {
+        /* Reduz para 100px em dispositivos muito pequenos */
+        width: 100px;
+    }
+
+    .imagem-perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .icone-avatar img {
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .nome-perfil {
+        font-size: 0.9rem;
+        margin-top: 6px;
+    }
+
+    .lista-perfis {
+        gap: 1.5vw;
+    }
+}
