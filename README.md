@@ -1,4 +1,5 @@
-📱 **Netflix Catalog Clone** | Clone de Catálogo da Netflix
+📱 **Netflix Catalog Clone** | **Clone de Catálogo da Netflix**
+
 🇺🇸 English | 🇧🇷 Português
 
 ---
